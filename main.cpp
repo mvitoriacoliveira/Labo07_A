@@ -1,7 +1,8 @@
 #include <iostream>
-#include "vector"
+#include "Robot.h"
+#include "Terrain.h"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
-	return 0;
+
+	return EXIT_SUCCESS;
 }
