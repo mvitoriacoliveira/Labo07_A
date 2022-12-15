@@ -8,6 +8,7 @@
 #include "array"
 #include "random"       //utilisation des fonctions pour générer un nombre random
 
+
 enum Deplacement {HAUT, BAS, GAUCHE, DROITE};
 using Data = int;
 using Coord = std::array<Data,2>;
@@ -19,13 +20,11 @@ public:
 	void setCoordY(int val);
 	int getCoordX() const;
 	int getCoordY() const;
-	unsigned deplacement(Coord coord);
-
+	void deplacement(Coord coord);
 private:
 	int numAleatoire(int min, int max);
-	const int nom;
+	static int id;
 	Coord coordXY;
-	int coordX;
 };
 
 

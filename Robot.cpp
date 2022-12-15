@@ -4,10 +4,12 @@
 
 #include "Robot.h"
 
-Robot::Robot(const int MAX_LARGEUR, const int maxHauteur){
-	//nom
-	coordXY[0] = numAleatoire(0, MAX_LARGEUR);
-	coordXY[0] = numAleatoire(0, MAX_HAUTEUR);
+Robot::Robot(const int maxLargeur, const int maxHauteur){
+   // Incrémente l'id afin qu'il soit unique pour chaque robot créé
+   this->id = id++;
+
+   this->coordXY[0] = numAleatoire(0, maxLargeur);
+   this->coordXY[1] = numAleatoire(0, maxHauteur);
 }
 
 void Robot::setCoordX(int val) {
@@ -25,8 +27,8 @@ int Robot::getCoordY() const {
 };
 
 int Robot::numAleatoire(int min, int max) {
-	min = (int)Deplacement::HAUT;
-	max = (int)Deplacement::DROITE;
+	//min = (int)Deplacement::HAUT;
+	//max = (int)Deplacement::DROITE;
 
 	// Algorithme de génération d'un nombre aléatoire dans un intervalle donné en paramètre
 	// Source : https://cplusplus.com/reference/random/default_random_engine
@@ -36,6 +38,25 @@ int Robot::numAleatoire(int min, int max) {
 
 	int num = distr(generator);
 	return num;
+}
+
+void Robot::deplacement(Coord coord) {
+   int num = numAleatoire((int)Deplacement::HAUT, (int)Deplacement::DROITE);
+
+   switch (num) {
+      case Deplacement::DROITE:
+         ++this->coordXY[0];
+         break;
+      case Deplacement::GAUCHE:
+         --this->coordXY[0];
+         break;
+      case Deplacement::HAUT:
+         ++this->coordXY[1];
+         break;
+      case Deplacement::BAS:
+         --this->coordXY[1];
+         break;
+   }
 }
 
 

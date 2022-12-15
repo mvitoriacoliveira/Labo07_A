@@ -3,3 +3,14 @@
 //
 
 #include "Terrain.h"
+
+Terrain::Terrain(const int largeur, const int hauteur) {
+
+}
+
+void Terrain::ajoutRobot(const Robot &r) {
+  // TerrainJeu[r.coordXY[0]][r.coordXY[1]] = r;
+}
+
+
+
