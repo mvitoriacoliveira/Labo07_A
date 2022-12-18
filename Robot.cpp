@@ -4,6 +4,8 @@
 
 #include "Robot.h"
 
+int Robot::id = 0;
+
 Robot::Robot(const int maxLargeur, const int maxHauteur){
    // Incrémente l'id afin qu'il soit unique pour chaque robot créé
    this->id = id++;

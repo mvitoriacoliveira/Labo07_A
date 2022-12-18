@@ -16,6 +16,7 @@ using Coord = std::array<Data,2>;
 class Robot {
 public:
 	Robot(int MAX_LARGEUR, int MAX_HAUTEUR);
+   Robot();
 	void setCoordX(int val);
 	void setCoordY(int val);
 	int getCoordX() const;
