@@ -7,6 +7,8 @@
 int Robot::cmpObj = 0;
 
 //faire include de terrain et prendre maxLargeur et maxHauteur depuis ce fichier?
+int Robot::id = 0;
+
 Robot::Robot(const int maxLargeur, const int maxHauteur){
    // Incrémente l'cmpObj afin qu'il soit unique pour chaque robot créé
 	Robot::id = ++cmpObj;

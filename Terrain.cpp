@@ -6,12 +6,26 @@
 #include "annexes.h" // symboles d'affichage
 #include <iostream> 	//cout
 
+<<<<<<<<< Temporary merge branch 1
+Terrain::Terrain(const int largeur, const int hauteur) {
+   TerrainJeu terrain(hauteur);
+   Ligne l(largeur);
+
+  for(int i = 0; i < hauteur; ++i){
+     for(int j = 0; j < largeur; ++j){
+        terrain[i][j] = l[j];
+     }
+     
+  }
+
+=========
 using namespace std;
+>>>>>>>>> Temporary merge branch 2
 
 Terrain::Terrain(int lrg, const int htr) : largeur(lrg), hauteur(htr) {}
 
 void Terrain::ajoutRobot(const Robot &r) {
-  // TerrainJeu[r.coordXY[0]][r.coordXY[1]] = r;
+  //TerrainJeu[r.coordXY[0]][r.coordXY[1]] = r;
 }
 
 std::ostream& operator<<(std::ostream& os, const Terrain& t){
