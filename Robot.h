@@ -20,7 +20,7 @@ public:
 	void setCoordX(int val);
 	void setCoordY(int val);
 	int getCoordX() const;
-	int getCoordY() const;g
+	int getCoordY() const;
 	int getId() const;
 	void deplacement(Coord coord);
 private:
