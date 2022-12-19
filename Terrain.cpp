@@ -6,7 +6,9 @@
 #include "annexes.h" // symboles d'affichage
 #include <iostream> 	//cout
 
-Terrain::Terrain(const int lrg, const int htr) : largeur(lrg), hauteur(htr) {}
+Terrain::Terrain(const int largeur, const int hauteur) : largeur(this->largeur), hauteur(this->hauteur){
+
+}
 
 void Terrain::ajoutRobot(const Robot &r) {
    vecRobot.push_back(r);

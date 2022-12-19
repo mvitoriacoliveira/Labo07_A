@@ -4,10 +4,13 @@
 
 #ifndef LABO07_A_TERRAIN_H
 #define LABO07_A_TERRAIN_H
-
 #include "vector"
 #include "Robot.h"
 #include <ostream>
+
+using DataTerrain = Robot*;
+using Ligne = std::vector<DataTerrain>;
+using TerrainJeu = std::vector<Ligne>;
 
 class Terrain {
    friend class Robot;
@@ -18,9 +21,12 @@ public:
    bool caseOccupee(size_t ligne, size_t col) const;
    void afficher();
 private:
-   std::vector<Robot> vecRobot;
-   const int largeur;
+<<<<<<<<< Temporary merge branch 1
+
+=========
+	const int largeur;
 	const int hauteur;
+>>>>>>>>> Temporary merge branch 2
 };
 
 
