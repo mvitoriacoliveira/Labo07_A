@@ -47,6 +47,9 @@ void affichage(const int largeur, const int hauteur){
 			} else {
 				cout << " ";
 				//si robot, alors cout son nom/numéro cmpObj
+				//it = find(vectRobot.begin(), ..end(), aPosition(i,j));
+				//aPosition est foncteur
+				//cout << it->getId();				
 			}
 		}
 		cout << endl;
