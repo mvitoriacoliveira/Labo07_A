@@ -17,9 +17,12 @@ int main() {
 	const int NB_OBJ = saisie(MSG_NB_OBJ, MSG_ERREUR, MIN_NB_OBJ, MAX_NB_OBJ);
 	*/
 
-	Terrain T(20, 10);
-	Robot R1(20, 10);
-	Robot R2(20, 10);
+	Terrain T(5, 4);
+	Robot R1(5, 4);
+	Robot R2(5, 4);
+
+   T.ajoutRobot(R1);
+   T.ajoutRobot(R2);
 
 	cout 	<< "R" << R1.getId() << " = (" << R1.getCoordX() << ", " << R1.getCoordY()
 			<< ")" << endl;
@@ -29,7 +32,7 @@ int main() {
 
 	//} while(nbRobots > 1)
 
-	cout << T;
+	T.afficher();
 
 	return EXIT_SUCCESS;
 }

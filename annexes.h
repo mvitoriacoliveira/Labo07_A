@@ -3,6 +3,7 @@
 #define LABO07_A_ANNEXES_H
 
 #include <string>
+#include <random>
 
 //------------------------------------------------------
 // Constantes de saisie
@@ -38,6 +39,8 @@ int saisie(const std::string& msgInvite,
 			  const std::string& msgErreur,
 			  int min,
 			  int max);
+
+int numAleatoire(int min, int max);
 
 void affichage(const int largeur, const int hauteur);
 

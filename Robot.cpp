@@ -1,17 +1,14 @@
 //
 // Created by mvito on 12/12/2022.
-//
+// faire un shuffle de la liste des vecteurs avant de les déplacer comme ça ils se déplacent aléatoirement.
 
 #include "Robot.h"
 
-int Robot::cmpObj = 0;
-
-//faire include de terrain et prendre maxLargeur et maxHauteur depuis ce fichier?
-int Robot::id = 0;
+int Robot::nbrRobot = 0;
 
 Robot::Robot(const int maxLargeur, const int maxHauteur){
    // Incrémente l'cmpObj afin qu'il soit unique pour chaque robot créé
-	Robot::id = ++cmpObj;
+	Robot::id = ++nbrRobot;
 
    coordXY[0] = numAleatoire(0, maxLargeur);
    coordXY[1] = numAleatoire(0, maxHauteur);
@@ -36,9 +33,6 @@ int Robot::getId() const{
 }
 
 int Robot::numAleatoire(int min, int max) {
-	//min = (int)Deplacement::HAUT;
-	//max = (int)Deplacement::DROITE;
-
 	// Algorithme de génération d'un nombre aléatoire dans un intervalle donné en paramètre
 	// Source : https://cplusplus.com/reference/random/default_random_engine
 	std::random_device                  rand_dev;

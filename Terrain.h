@@ -12,10 +12,11 @@
 class Terrain {
    friend class Robot;
 	friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
-	bool caseOccupee(const Terrain& t);
 public:
    Terrain(int largeur, int hauteur);
    void ajoutRobot(const Robot& r);
+   bool caseOccupee(size_t ligne, size_t col) const;
+   void afficher();
 private:
    std::vector<Robot> vecRobot;
    const int largeur;
