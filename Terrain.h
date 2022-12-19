@@ -14,6 +14,8 @@ class Terrain {
 public:
    Terrain(int largeur, int hauteur);
    void ajoutRobot(const Robot& r);
+   bool caseOccupee(size_t ligne, size_t col) const;
+   void afficher();
 private:
 	bool caseOccupee(const Terrain& t) const;
 
