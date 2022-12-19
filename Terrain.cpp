@@ -6,21 +6,12 @@
 #include "annexes.h" // symboles d'affichage
 #include <iostream> 	//cout
 
-Terrain::Terrain(const int largeur, const int hauteur) {
-   TerrainJeu terrain(hauteur);
-   Ligne l(largeur);
+Terrain::Terrain(const int largeur, const int hauteur) : largeur(this->largeur), hauteur(this->hauteur){
 
-  for(int i = 0; i < hauteur; ++i){
-     for(int j = 0; j < largeur; ++j){
-        terrain[i][j] = l[j];
-     }
-     
-  }
-
-Terrain::Terrain(int lrg, const int htr) : largeur(lrg), hauteur(htr) {}
+}
 
 void Terrain::ajoutRobot(const Robot &r) {
-  //TerrainJeu[r.coordXY[0]][r.coordXY[1]] = r;
+   vecRobot.push_back(r);
 }
 
 std::ostream& operator<<(std::ostream& os, const Terrain& t){
@@ -35,7 +26,7 @@ std::ostream& operator<<(std::ostream& os, const Terrain& t){
 				//si robot, alors cout son nom/numéro cmpObj
 			}
 		}
-		os << endl;
+		os << std::endl;
 	}
 	return os;
 }
