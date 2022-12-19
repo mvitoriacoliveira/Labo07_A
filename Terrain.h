@@ -6,6 +6,7 @@
 #define LABO07_A_TERRAIN_H
 #include "vector"
 #include "Robot.h"
+#include <ostream>
 
 using DataTerrain = Robot*;
 using Ligne = std::vector<DataTerrain>;
@@ -13,11 +14,15 @@ using TerrainJeu = std::vector<Ligne>;
 
 class Terrain {
    friend class Robot;
+	friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
+	bool caseOccupee(const Terrain& t);
 public:
    Terrain(int largeur, int hauteur);
    void ajoutRobot(const Robot& r);
 private:
 
+  const int largeur;
+	const int hauteur;
 };
 
 

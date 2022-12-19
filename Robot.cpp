@@ -4,14 +4,17 @@
 
 #include "Robot.h"
 
+int Robot::cmpObj = 0;
+
+//faire include de terrain et prendre maxLargeur et maxHauteur depuis ce fichier?
 int Robot::id = 0;
 
 Robot::Robot(const int maxLargeur, const int maxHauteur){
-   // Incrémente l'id afin qu'il soit unique pour chaque robot créé
-   this->id = id++;
+   // Incrémente l'cmpObj afin qu'il soit unique pour chaque robot créé
+	Robot::id = ++cmpObj;
 
-   this->coordXY[0] = numAleatoire(0, maxLargeur);
-   this->coordXY[1] = numAleatoire(0, maxHauteur);
+   coordXY[0] = numAleatoire(0, maxLargeur);
+   coordXY[1] = numAleatoire(0, maxHauteur);
 }
 
 void Robot::setCoordX(int val) {
@@ -27,6 +30,10 @@ int Robot::getCoordX() const{
 int Robot::getCoordY() const {
 	return coordXY[1];
 };
+
+int Robot::getId() const{
+	return id;
+}
 
 int Robot::numAleatoire(int min, int max) {
 	//min = (int)Deplacement::HAUT;
