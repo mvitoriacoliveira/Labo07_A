@@ -15,15 +15,25 @@ using Coord = std::array<Data,2>;
 
 class Robot {
 public:
+
 	friend class Terrain;
+	void deplacement(Coord coord);
+
+	//-----------------------------------------
+	// Constructeurs
 	Robot(int MAX_LARGEUR, int MAX_HAUTEUR);
    Robot();
+
+	//----------------------------------------
+	// Destructeur
+	~Robot();
+
 	void setCoordX(int val);
 	void setCoordY(int val);
 	int getCoordX() const;
 	int getCoordY() const;
 	int getId() const;
-	void deplacement(Coord coord);
+
 private:
 	static int cmpObj;
 	int id;
