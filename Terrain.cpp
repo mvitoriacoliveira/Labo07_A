@@ -6,9 +6,8 @@
 #include "annexes.h" // symboles d'affichage
 #include <iostream> 	//cout
 
-Terrain::Terrain(const int largeur, const int hauteur) : largeur(this->largeur), hauteur(this->hauteur){
+Terrain::Terrain(const int lrg, const int htr) : largeur(lrg), hauteur(htr) {}
 
-}
 
 void Terrain::ajoutRobot(const Robot &r) {
    vecRobot.push_back(r);
@@ -30,7 +29,7 @@ void Terrain::afficher() {
             std::cout << LMT_VERT;
          } else {
             for(size_t i = 0; i < Terrain::vecRobot.size(); ++i){
-               if(vecRobot.at(i).getCoordX() == i and vecRobot.at(i).getCoordY() == j){
+               if(vecRobot.at(i).getCoordX() == j and vecRobot.at(i).getCoordY() == i){
                   std::cout << vecRobot.at(i).getId();
                }
                else{
@@ -53,6 +52,7 @@ std::ostream& operator<<(std::ostream& os, const Terrain& t){
 			} else if (j == 0 or j == t.largeur + 1){
 				os << LMT_VERT;
 			} else {
+            os << " ";
 				//si robot, alors cout son nom/numéro cmpObj
 			}
 		}

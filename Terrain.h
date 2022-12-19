@@ -8,10 +8,6 @@
 #include "Robot.h"
 #include <ostream>
 
-using DataTerrain = Robot*;
-using Ligne = std::vector<DataTerrain>;
-using TerrainJeu = std::vector<Ligne>;
-
 class Terrain {
    friend class Robot;
 	friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
@@ -21,12 +17,9 @@ public:
    bool caseOccupee(size_t ligne, size_t col) const;
    void afficher();
 private:
-<<<<<<<<< Temporary merge branch 1
-
-=========
+   std::vector<Robot> vecRobot;
 	const int largeur;
 	const int hauteur;
->>>>>>>>> Temporary merge branch 2
 };
 
 
