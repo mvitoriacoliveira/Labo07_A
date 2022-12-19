@@ -17,6 +17,7 @@ class Robot {
 public:
 	friend class Terrain;
 	Robot(int MAX_LARGEUR, int MAX_HAUTEUR);
+   Robot();
 	void setCoordX(int val);
 	void setCoordY(int val);
 	int getCoordX() const;
