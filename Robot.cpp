@@ -1,6 +1,14 @@
-//
-// Created by mvito on 12/12/2022.
-// faire un shuffle de la liste des vecteurs avant de les déplacer comme ça ils se déplacent aléatoirement.
+//---------------------------------------------------------
+// Fichier        : Robot.h
+// Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
+// But            : Fichier permettant de créer les robots et de les déplacer.
+// Modifications  :
+// Remarque(s)    :
+// Compilation :
+//    - Version C++ : 20
+//    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
+//                    Apple clang version 14.0.0 (Dario)
+//---------------------------------------------------------
 
 #include "Robot.h"
 

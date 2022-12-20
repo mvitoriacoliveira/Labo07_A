@@ -11,7 +11,6 @@
 
 class Terrain {
    friend class Robot;
-	//friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
 public:
    Terrain(int largeur, int hauteur);
    void ajoutRobot(const Robot& r);
