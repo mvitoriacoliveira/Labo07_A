@@ -6,7 +6,7 @@
 #include "annexes.h" // symboles d'affichage
 #include <iostream> 	//cout
 
-Terrain::Terrain(const int lrg, const int htr) : largeur(lrg), hauteur(htr) {}
+Terrain::Terrain(const int lrg, const int htr) : largeur(lrg), hauteur(htr){};
 
 
 void Terrain::ajoutRobot(const Robot &r) {
@@ -14,29 +14,39 @@ void Terrain::ajoutRobot(const Robot &r) {
 }
 
 //TODO changer le nom de la fonction
-//bool Terrain::caseOccupee(size_t ligne, size_t col) const {
-//   for(size_t i = 0; i < Terrain::vecRobot.size(); ++i){
-//      return vecRobot.at(i).coordXY[0] == col and vecRobot.at(i).coordXY[1] == col;
-//  }
-//}
+bool Terrain::caseOccupee(size_t ligne, size_t col) const {
+   for(size_t i = 0; i < Terrain::vecRobot.size(); ++i){
+      if(vecRobot.at(i).getCoordX() == ligne and vecRobot.at(i).getCoordY() == col){
+         std::cout << vecRobot.at(i).getId();
+         return true;
+      }
+   }
+   return false;
+}
+
+void Terrain::afficherRobot() {
+   for(int i = 0; i < hauteur; ++i){
+      for(int j = 0; j < largeur; ++j){
+         if(!caseOccupee(i, j)){
+            std::cout << " ";
+         }
+
+      }
+      std::cout << std::endl;
+   }
+}
+
 
 void Terrain::afficher() {
-   for(int i = 0; i < (hauteur) + 2; ++i){
-      for (int j = 0; j < largeur + 2; ++j){
+   for(int i = 0; i < (hauteur) + 2; ++i) {
+      for (int j = 0; j < largeur + 2; ++j) {
          if (i == 0 or i == hauteur + 1) {
             std::cout << LMT_HOR;
-         } else if (j == 0 or j == largeur + 1){
+         } else if (j == 0 or j == largeur + 1) {
             std::cout << LMT_VERT;
-         } else {
-            for(size_t i = 0; i < Terrain::vecRobot.size(); ++i){
-               if(vecRobot.at(i).getCoordX() == j and vecRobot.at(i).getCoordY() == i){
-                  std::cout << vecRobot.at(i).getId();
-               }
-               else{
-                  std::cout << " ";
-               }
-            }
-            //si robot, alors cout son nom/numéro cmpObj
+         }
+         else if(!caseOccupee(i, j)){
+            std::cout << " ";
          }
       }
       std::cout << std::endl;
