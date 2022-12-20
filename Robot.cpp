@@ -32,17 +32,6 @@ int Robot::getId() const{
 	return id;
 }
 
-int Robot::numAleatoire(int min, int max) {
-	// Algorithme de génération d'un nombre aléatoire dans un intervalle donné en paramètre
-	// Source : https://cplusplus.com/reference/random/default_random_engine
-	std::random_device                  rand_dev;
-	std::default_random_engine          generator(rand_dev());
-	std::uniform_int_distribution<int>  distr(min, max);
-
-	int num = distr(generator);
-	return num;
-}
-
 void Robot::deplacement() {
    int num = numAleatoire((int)Deplacement::HAUT, (int)Deplacement::DROITE);
 

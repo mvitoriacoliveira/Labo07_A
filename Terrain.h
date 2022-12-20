@@ -7,15 +7,17 @@
 #include "vector"
 #include "Robot.h"
 #include <ostream>
+#include <algorithm>
 
 class Terrain {
    friend class Robot;
-	friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
+	//friend std::ostream& operator<<(std::ostream& os, const Terrain& t);
 public:
    Terrain(int largeur, int hauteur);
    void ajoutRobot(const Robot& r);
    bool caseOccupee(size_t ligne, size_t col) const;
    void afficher();
+   void deplacementRobot();
 private:
    std::vector<Robot> vecRobot;
 	const int largeur;
