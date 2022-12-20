@@ -3,7 +3,7 @@
 // Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
 // But            : Fichier permettant de créer les robots et de les déplacer.
 // Modifications  :
-// Remarque(s)    : -
+// Remarque(s)    :
 // Compilation :
 //    - Version C++ : 20
 //    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
@@ -21,7 +21,7 @@ using Data = int;
 using Coord = std::array<Data,2>;
 
 class Robot {
-   //friend class Terrain;
+   friend class Terrain;
 public:
 	Robot(int MAX_LARGEUR, int MAX_HAUTEUR);
 	void setCoordX(int val);
@@ -30,13 +30,14 @@ public:
 	int getCoordY() const;
    int getId() const;
 	void deplacement();
+	bool aPosition(int ligne, int col);
+	bool caseValable(Coord& prochCase) const;
+
 private:
    enum Deplacement {HAUT, BAS, GAUCHE, DROITE};
-	//Position robot
 	Coord coordXY;
    int id;
    static int nbrRobot;
-	//un robot se deplace sur un terrain précis, mettre en donnée?
 };
 
 

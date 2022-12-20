@@ -8,7 +8,6 @@
 
 Terrain::Terrain(const int lrg, const int htr) : largeur(lrg), hauteur(htr){}
 
-
 void Terrain::ajoutRobot(const Robot &r) {
    vecRobot.push_back(r);
 }
@@ -69,6 +68,9 @@ std::ostream& operator<<(std::ostream& os, const Terrain& t){
 			} else {
             os << " ";
 				//si robot, alors cout son nom/numéro cmpObj
+				//it = find(vectRobot.begin(), ..end(), aPosition(i,j));
+				//aPosition est foncteur
+				//cout << it->getId();
 			}
 		}
 		os << std::endl;
@@ -76,14 +78,6 @@ std::ostream& operator<<(std::ostream& os, const Terrain& t){
 	return os;
 }
 */
-
-
-
-
-
-
-//TODO le terrain doit avoir accès aux positions des robots qui s'y déplacent
-// terrain est friend class de robot
 
 
 

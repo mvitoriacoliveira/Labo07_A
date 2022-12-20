@@ -4,7 +4,7 @@
 // But            : Application permettant de déplacer des robots
 //                  sur un terrain puis de les faire se combattre
 // Modifications  :
-// Remarque(s)    : -
+// Remarque(s)    :
 // Compilation :
 //    - Version C++ : 20
 //    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
@@ -14,7 +14,6 @@
 #include <iostream>
 #include "Robot.h"
 #include "Terrain.h"
-#include "annexes.h"
 #include <string>
 
 using namespace std;
@@ -22,13 +21,6 @@ using namespace std;
 int main() {
 
 	//do{
-
-	/*
-	cout << MSG_BIENVENUE << endl;
-	const int LARGEUR = saisie(MSG_LRG, MSG_ERREUR, MIN_LRG, MAX_LRG);
-	const int HAUTEUR = saisie(MSG_HTR, MSG_ERREUR, MIN_HTR, MAX_HTR);
-	const int NB_OBJ = saisie(MSG_NB_OBJ, MSG_ERREUR, MIN_NB_OBJ, MAX_NB_OBJ);
-	*/
 
 	Terrain T(5, 4);
 	Robot R1(5, 4);
