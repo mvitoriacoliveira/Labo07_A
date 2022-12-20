@@ -17,12 +17,9 @@ public:
    bool caseOccupee(size_t ligne, size_t col) const;
    void afficher();
 private:
-	bool caseOccupee(const Terrain& t) const;
-
-	std::vector<Robot> vecRobot;
+   std::vector<Robot> vecRobot;
 	const int largeur;
 	const int hauteur;
-
 };
 
 

@@ -9,7 +9,6 @@
 #include <random>       //utilisation des fonctions pour générer un nombre random
 //#include "Terrain.h"
 
-enum Deplacement {HAUT, BAS, GAUCHE, DROITE};
 using Data = int;
 using Coord = std::array<Data,2>;
 
@@ -22,7 +21,7 @@ public:
 	int getCoordX() const;
 	int getCoordY() const;
    int getId() const;
-	void deplacement(Coord coord);
+	void deplacement();
 private:
    enum Deplacement {HAUT, BAS, GAUCHE, DROITE};
 	int numAleatoire(int min, int max);
