@@ -14,28 +14,13 @@ void Terrain::ajoutRobot(const Robot &r) {
 }
 
 //TODO changer le nom de la fonction
-bool Terrain::caseOccupee(size_t ligne, size_t col) const {
+void Terrain::caseOccupee(size_t ligne, size_t col) const {
    for(size_t i = 0; i < Terrain::vecRobot.size(); ++i){
       if(vecRobot.at(i).getCoordX() == ligne and vecRobot.at(i).getCoordY() == col){
          std::cout << vecRobot.at(i).getId();
-         return true;
       }
    }
-   return false;
 }
-
-void Terrain::afficherRobot() {
-   for(int i = 0; i < hauteur; ++i){
-      for(int j = 0; j < largeur; ++j){
-         if(!caseOccupee(i, j)){
-            std::cout << " ";
-         }
-
-      }
-      std::cout << std::endl;
-   }
-}
-
 
 void Terrain::afficher() {
    for(int i = 0; i < (hauteur) + 2; ++i) {
@@ -45,8 +30,8 @@ void Terrain::afficher() {
          } else if (j == 0 or j == largeur + 1) {
             std::cout << LMT_VERT;
          }
-         else if(!caseOccupee(i, j)){
-            std::cout << " ";
+         else{
+            caseOccupee(i, j);
          }
       }
       std::cout << std::endl;
@@ -60,14 +45,13 @@ void Terrain::deplacementRobot() {
    for(int i = 0; i < hauteur; ++i){
       for(int j = 0; j < largeur; ++j){
          for(size_t k = 0; k < vecRobot.size(); ++k){
-            if(!caseOccupee(i, j)){
-               vecRobot.at(k).deplacement();
-            }
-            else{
+            //if(!caseOccupee(i, j)){
+            //   vecRobot.at(k).deplacement();
+            //}
+            //else{
                //tué le robot à la case
-            }
+            //}
          }
-
       }
    }
 }
