@@ -53,6 +53,24 @@ void Terrain::afficher() {
    }
 }
 
+void Terrain::deplacementRobot() {
+   std::random_device rd;
+   std::shuffle(vecRobot.begin(), vecRobot.end(), rd);
+
+   for(int i = 0; i < hauteur; ++i){
+      for(int j = 0; j < largeur; ++j){
+         for(size_t k = 0; k < vecRobot.size(); ++k){
+            if(!caseOccupee(i, j)){
+               vecRobot.at(k).deplacement();
+            }
+            else{
+               //tué le robot à la case
+            }
+         }
+
+      }
+   }
+}
 
 std::ostream& operator<<(std::ostream& os, const Terrain& t){
 	for(int i = 0; i < (t.hauteur) + 2; ++i){

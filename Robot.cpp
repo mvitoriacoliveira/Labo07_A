@@ -10,8 +10,8 @@ Robot::Robot(const int maxLargeur, const int maxHauteur){
    // Incrémente l'cmpObj afin qu'il soit unique pour chaque robot créé
 	Robot::id = ++nbrRobot;
 
-   coordXY[0] = numAleatoire(0, maxLargeur);
-   coordXY[1] = numAleatoire(0, maxHauteur);
+   coordXY[0] = numAleatoire(1, maxHauteur);
+   coordXY[1] = numAleatoire(1, maxLargeur);
 }
 
 void Robot::setCoordX(int val) {
@@ -43,7 +43,7 @@ int Robot::numAleatoire(int min, int max) {
 	return num;
 }
 
-void Robot::deplacement(Coord coord) {
+void Robot::deplacement() {
    int num = numAleatoire((int)Deplacement::HAUT, (int)Deplacement::DROITE);
 
    switch (num) {
