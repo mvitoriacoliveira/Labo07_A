@@ -1,6 +1,15 @@
-//
-// Created by mvito on 12/12/2022.
-//
+//---------------------------------------------------------
+// Fichier        : Terrain.cpp
+// Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
+// But            : Fichier contenant l'algorithme de création du terrain et
+//                  de son affichage.
+// Modifications  :
+// Remarque(s)    : -
+// Compilation :
+//    - Version C++ : 20
+//    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
+//                    Apple clang version 14.0.0 (Dario)
+//---------------------------------------------------------
 
 #include "Terrain.h"
 #include "annexes.h" // symboles d'affichage
@@ -56,28 +65,6 @@ void Terrain::deplacementRobot() {
       }
    }
 }
-
-/*
-std::ostream& operator<<(std::ostream& os, const Terrain& t){
-	for(int i = 0; i < (t.hauteur) + 2; ++i){
-		for (int j = 0; j < t.largeur + 2; ++j){
-			if (i == 0 or i == t.hauteur + 1) {
-				os << LMT_HOR;
-			} else if (j == 0 or j == t.largeur + 1){
-				os << LMT_VERT;
-			} else {
-            os << " ";
-				//si robot, alors cout son nom/numéro cmpObj
-				//it = find(vectRobot.begin(), ..end(), aPosition(i,j));
-				//aPosition est foncteur
-				//cout << it->getId();
-			}
-		}
-		os << std::endl;
-	}
-	return os;
-}
-*/
 
 
 

@@ -1,6 +1,14 @@
-//
-// Created by mvito on 12/12/2022.
-//
+//---------------------------------------------------------
+// Fichier        : Terrain.h
+// Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
+// But            : Fichier permettant de créer le terrain et gérant l'affichage.
+// Modifications  :
+// Remarque(s)    : -
+// Compilation :
+//    - Version C++ : 20
+//    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
+//                    Apple clang version 14.0.0 (Dario)
+//---------------------------------------------------------
 
 #ifndef LABO07_A_TERRAIN_H
 #define LABO07_A_TERRAIN_H

@@ -1,9 +1,9 @@
 //---------------------------------------------------------
-// Fichier        : Robot.h
+// Fichier        : Robot.cpp
 // Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
-// But            : Fichier permettant de créer les robots et de les déplacer.
+// But            : Fichier contenant l'agorithme de création d'un robot et de son déplacement
 // Modifications  :
-// Remarque(s)    :
+// Remarque(s)    : -
 // Compilation :
 //    - Version C++ : 20
 //    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)

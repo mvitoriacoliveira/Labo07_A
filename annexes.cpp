@@ -1,3 +1,17 @@
+//---------------------------------------------------------
+// Fichier        : annexes.cpp
+// Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
+// But            : Fichier contenant l'algorithme de saisie et
+//                  de génération d'un nombre aléatoire.
+// Modifications  :
+// Remarque(s)    : -
+// Compilation :
+//    - Version C++ : 20
+//    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
+//                    Apple clang version 14.0.0 (Dario)
+//---------------------------------------------------------
+
+
 #include <iostream>  // cin et cout
 #include <limits>    // numeric_limits
 #include <string>
@@ -5,8 +19,6 @@
 
 using namespace std;
 
-//TODO alligner msgs invite
-//TODO nbre objet = 0 => fin programme ou saisie invalide?
 int saisie(const string& msgInvite,
 			  const string& msgErreur,
 			  const int min,
@@ -31,29 +43,6 @@ int saisie(const string& msgInvite,
 	} while(erreur);
 
 	return saisie;
-}
-
-//ex prof: largeur = 20 => 22x '-'
-// hauteur = 10 => 10x '|' + 1&derniere lignes
-//TODO imprimer terrain par surcharge d'operateur<<
-
-void affichage(const int largeur, const int hauteur){
-	for(int i = 0; i < hauteur + 2; ++i){
-		for (int j = 0; j < largeur + 2; ++j){
-			if (i == 0 or i == hauteur + 1) {
-				cout << LMT_HOR;
-			} else if (j == 0 or j == largeur + 1){
-				cout << LMT_VERT;
-			} else {
-				cout << " ";
-				//si robot, alors cout son nom/numéro cmpObj
-				//it = find(vectRobot.begin(), ..end(), aPosition(i,j));
-				//aPosition est foncteur
-				//cout << it->getId();				
-			}
-		}
-		cout << endl;
-	}
 }
 
 int numAleatoire(int min, int max) {

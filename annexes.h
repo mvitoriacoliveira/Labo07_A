@@ -1,3 +1,14 @@
+//---------------------------------------------------------
+// Fichier        : annexes.h
+// Auteur(s)      : Cosmo De Oliveira Maria Vitória & Vasques Dario
+// But            : Fichier permettant de saisir et de génerer un nombre aléatoire
+// Modifications  :
+// Remarque(s)    : -
+// Compilation :
+//    - Version C++ : 20
+//    - Compilateur : Mingw-w64 g++ 12.2.0 (Vitória)
+//                    Apple clang version 14.0.0 (Dario)
+//---------------------------------------------------------
 
 #ifndef LABO07_A_ANNEXES_H
 #define LABO07_A_ANNEXES_H
@@ -7,7 +18,6 @@
 
 //------------------------------------------------------
 // Constantes de saisie
-//TODO
 const std::string MSG_BIENVENUE = "Ce programme ...";
 const std::string MSG_ERREUR = "Saisie invalide...";
 const std::string MSG_LRG = "largeur ";
